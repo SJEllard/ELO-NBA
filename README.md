@@ -1,2 +1,2 @@
 # ELO-NBA
-A NBA ELO System
+An ELO System for an NBA Season
