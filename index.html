@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
 
     <title>NBA Elo System</title>
 </head>
@@ -54,18 +55,59 @@
         <div class='col-md-10 mx-auto mb-5'>
 
             <div class='card-body'>
-                <h2>Elo Analysis</h2>     
+                <h2>2018-19 NBA Elo Analysis</h2>     
                     <br>   
                 <p> 
-                    Before digging into the algorithm lets look at some of the results. Here we have a full Elo analysis of the 2018-2019 NBA regular season.
+                    Before digging into the algorithm lets look at some of the results. 
+                    Here we have a graph of all 30 NBA teams' Elo ratings after the 2018-19 regular season.
                 </p>
+
                 <figure class="figure">
                         <img src="/images/regseason_bar.PNG" class="figure-img img-fluid rounded" alt="2018-19 NBA Regular Season">
                         <figcaption class="figure-caption"><small>2018-19 Regular Season</small></figcaption>
                 </figure>
+                <br>
+                <p> 
+                        According to the Elo Rating System the Houston Rockets had the best performance,
+                        closely followed by the Portland Trail Blazers and the Milwaukee Bucks. 
+                        <br><br>
+                        Milwaukee should not be a surprise - MVP Giannis Antetokounmpo lead the Bucks to finish 1st overall in terms of
+                        win-loss, finishing the regular season 60-22.
+                        <br><br>
+                        Conversely, our Elo Rating System values the Rockets and the Trail Blazers greater then a 
+                        simple win-loss record might suggest, both those teams finished 53-29 (Tied for 5th overall).
+                </p>
+                <p> 
+                    ...Let's look at the results including the playoffs...
+                </p>
+                <br>
+                <figure class="figure">
+                        <img src="/images/bothseason_bar.PNG" class="figure-img img-fluid rounded" alt="2018-19 NBA Regular Season">
+                        <figcaption class="figure-caption"><small>2018-19 Full Season (Regular Season and Playoffs)</small></figcaption>
+                </figure>
                 <br><br>
                 <p> 
-                    ...and here are the results including the playoffs...
+                        After the full season the Toronto Raptors 
+                        were rated as having the best performance. They did win the 2019 NBA Championship, 
+                        so this makes sense. 
+                        <br><br>
+                        An interesting aspect of this result is how large the Raptors' rating difference 
+                        is from the regular season to the playoffs (1627 to 1743, a <b>116  point increase</b>). 
+                        The Golden State Warriors and Philadephia 76ers also had signficant performance rating jumps,
+                        69 and 44 points respectively. 
+                </p>
+                <br>
+                <figure class="figure">
+                        <img class = "table" src="/data_folder/elo ratings/elo_ratings.PNG" class="figure-img img-fluid rounded" alt="2018-19 NBA Regular Season">
+                        <figcaption class="figure-caption"><small>2018-19 Full Season Elo Table</small></figcaption>
+                </figure>
+                <p> 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Nihil doloremque ad quaerat officiis saepe impedit. 
+                        <br><br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, sint. 
+                        Lorem ipsum, dolor sit, Aperiam nihil eaque eius nam, accusantium. Les
+                        sont vis hertus! Dolora beno von adiposel lerus, tarusa folem. 
                 </p>
 
             </div>
@@ -79,7 +121,7 @@
 
             <div class='card-body'>
                 <h2>How does it Work?</h2>     
-                    <br>   
+                <br>   
                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Dolores, natus. Lorem ipsum dolor, sit amet consectetur adipisicing 
                     elit. Atque.
@@ -87,11 +129,14 @@
                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Dolores, natus. Lorem, ipsum dolor. Lorem, ipsum.
                 </p>
-                <h5>Technologies used:</h5>
+                <h5>Main technologies used:</h5>
                 <ul>
-                    <li>One</li>
-                    <li>Two</li>
-                    <li>Three</li>
+                    <li>Python, Pandas</li>
+                    <li>Jupyter Notebook</li>
+                </ul>
+                <h5>Other technologies used:</h5>
+                <ul>
+                    <li>Plot.ly</li>
                 </ul>
             </div>
 
