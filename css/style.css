@@ -11,6 +11,15 @@ margin-left: auto;
 margin-right: auto;
 }
 .bottom a:hover { 
-    color: white;
+    text-decoration: none;
+}
+
+a:hover { 
+    color: #B54213;
+    text-decoration: none;
+}
+
+a { 
+    color: #E47041;
     text-decoration: none;
 }
