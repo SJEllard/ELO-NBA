@@ -4,3 +4,13 @@
 margin-left: auto;
 margin-right: auto;
 }
+
+.bottom-btn {
+    display: block;
+margin-left: auto;
+margin-right: auto;
+}
+.bottom a:hover { 
+    color: white;
+    text-decoration: none;
+}
