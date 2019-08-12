@@ -122,20 +122,31 @@
             <div class='card-body'>
                 <h2>How does it work?</h2>     
                 <br>   
-                <p> The Elo System has two main components to its algorithm. 
+                <p> The first component of the algorithm is the comparison between two teams in a single game.
+                    The expected win probability is calculated based on the teams ratings. 
+                    In a match between two evenly rated teams each will have a win probability of 0.5 (they are expected to win half of the time). 
+                    This probability is then compared to the real outcome of the game and both teams ratings are then updated accordingly.
                 </p>
-                <p> The first part is the comparison of one individual game. 
+                <p> 
                 </p>
                 <figure class="figure">
                         <img src="https://sjellard.github.io/ELO-NBA/images/one_game.PNG" class="figure-img img-fluid rounded" alt="...">
                         <figcaption class="figure-caption"><small>Caption</small></figcaption>
                 </figure>
-                <p> The second component to the algorithm is to loop through an entire season of games
+                <p> Next, we iterate this function over an entire season of games. We look up the information from each game, pass the information 
+                    to the first function and increase the count by one. Our count moves us to the next game, finishing when we have counted through
+                    the entire season.
                 </p>
                 <figure class="figure">
                         <img src="https://sjellard.github.io/ELO-NBA/images/loop_games.PNG" class="figure-img img-fluid rounded" alt="...">
                         <figcaption class="figure-caption"><small>Caption</small></figcaption>
                 </figure>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum dolor, Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit. Ex, quo laborum iste nulla officiis autem? Pase tokel inure lops.
+                    </p>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime animi dicta tempore officia.
+                        Grat en ravin. Lorem ipsum dolor sit. Siten valu en animuso, enlibra! Enlibra! 
+                        </p>
                 <h5>Main technologies used:</h5>
                 <ul>
                     <li>Python, Pandas</li>
