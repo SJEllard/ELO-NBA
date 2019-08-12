@@ -20,3 +20,7 @@ Instructions will go here
 NBA Elo is written in Python using Pandas and Jupyter Notebook. 
 
 Plot.ly is used for graphs. 
+
+<h2>Planned Updates</h2>
+<li>Implement homecourt advantage
+<li>Decrease autocorrelation (Lower K Value)
