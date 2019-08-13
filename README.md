@@ -1,5 +1,9 @@
 # NBA Elo System
-A NBA Elo Rating System 
+A NBA Elo Rating System. 
+
+View at: https://sjellard.github.io/ELO-NBA/
+
+View Jupyter Notebook at: https://nbviewer.jupyter.org/github/SJEllard/ELO-NBA/blob/master/ELO-NBA-jupyter.ipynb
 
 <h2>Description</h2>
 NBA Elo System is an inferential rating system that calculates the relative strength of NBA teams. 
