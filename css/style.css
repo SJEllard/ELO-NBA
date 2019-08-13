@@ -1,15 +1,8 @@
-.table {
-    width: 60%;
-    display: block;
-margin-left: auto;
-margin-right: auto;
-}
-
 .bottom-btn {
     display: block;
-margin-left: auto;
-margin-right: auto;
+    margin: auto;
 }
+
 .bottom a:hover { 
     text-decoration: none;
 }
