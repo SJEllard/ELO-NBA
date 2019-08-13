@@ -34,10 +34,10 @@
                     World of Warcraft. 
                     <br><br>
                     A teams strength is represented by their rating (the higher, the better). 
-                    After every game, the winner takes points from the loser. 
+                    After every game the winner takes points from the loser. 
                     The amount of points won (or lost) is determined by the difference in ratings. 
                     For example, when a high rated team beats a low rated team they will only win a few points.
-                    But, when a low rated team upsets a high rated team, they win many points.  
+                    But, when a low rated team upsets a high rated team they win many points.  
                     <br><br>
                     <small>This project has been significantly inspired by Nate Silver’s statistical NBA projections. 
                     To see more of Nate Silver’s work visit <a href="https://projects.fivethirtyeight.com/complete-history-of-the-nba/#raptors" target="_blank">The Complete History of the NBA</a>
@@ -59,7 +59,7 @@
                     <br>   
                 <p> 
                     Before digging into the algorithm lets look at some of the results. 
-                    Here we have a graph of all 30 NBA teams' Elo ratings after the 2018-19 regular season.
+                    Here we have a graph of all 30 NBA teams' Elo ratings after the 2018-19 regular season:
                 </p>
 
                 <figure class="figure">
@@ -78,7 +78,7 @@
                         simple win-loss record might suggest, both those teams finished 53-29 (Tied for 5th overall).
                 </p>
                 <p> 
-                    ...Let's look at the results including the playoffs...
+                    Let's look at the results including the playoffs:
                 </p>
                 <br>
                 <figure class="figure">
@@ -101,15 +101,6 @@
                         <img class="table" src="https://sjellard.github.io/ELO-NBA/data_folder/elo_ratings/elo_ratings.PNG" class="figure-img img-fluid rounded" alt="2018-19 Full Season Elo Table">
                         <figcaption class="figure-caption"><small>2018-19 Full Season Elo Table</small></figcaption>
                 </figure>
-                <p> 
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Nihil doloremque ad quaerat officiis saepe impedit. 
-                        <br><br>
-                        Lorem ipsum sa dolor sit amet, consectetur adipisicing elit. Nostrum, sint. 
-                        Lorem ipsum, dolor kel valire sit, Aperiam nihil eaque eius nam, accusantium. Les
-                        sont vis valem hertus! Dolora den beno von adiposel lerus, tarusa folem. 
-                </p>
-
             </div>
         </div>
     </div>
@@ -124,29 +115,68 @@
                 <br>   
                 <p> The first component of the algorithm is the comparison between two teams in a single game.
                     The expected win probability is calculated based on the teams ratings. 
+                </p>
+                <p>
                     In a match between two evenly rated teams each will have a win probability of 0.5 (they are expected to win half of the time). 
-                    This probability is then compared to the real outcome of the game and both teams ratings are then updated accordingly.
+                    The expected win probabilities are then compared to the real outcome of the game and both teams ratings are then updated accordingly.
                 </p>
-                <p> 
-                </p>
+                <br>
                 <figure class="figure">
-                        <img src="https://sjellard.github.io/ELO-NBA/images/one_game.PNG" class="figure-img img-fluid rounded" alt="...">
-                        <figcaption class="figure-caption"><small>Caption</small></figcaption>
+                    <img src="https://sjellard.github.io/ELO-NBA/images/one_game.PNG" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption"><small></small></figcaption>
                 </figure>
-                <p> Next, we iterate this function over an entire season of games. We look up the information from each game, pass the information 
-                    to the first function and increase the count by one. Our count moves us to the next game, finishing when we have counted through
-                    the entire season.
+                <br><br>
+                <p>
+                    The winning team wins points from the losing team and the amount won is deduced from the difference 
+                    in performance ratings. 
                 </p>
+                <br><br>
+                <table class="table">
+                    <thead class='thead-light'>
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Team A Rating (Winner)</th>
+                        <th scope="col">Team B Rating (Loser)</th>
+                        <th scope="col">Points won/lost</th>
+                        <th scope="col">Updated Ratings</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>1500</td>
+                        <td>1500</td>
+                        <td>+16</td>
+                        <td>A: 1516 and B: 1484</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>1590</td>
+                        <td>1500</td>
+                        <td>+12</td>
+                        <td>A: 1602 and B: 1488</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>1690</td>
+                        <td>1500</td>
+                        <td>+8</td>
+                        <td>A: 1698 and B: 1491</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                <br>
+                <p> Next, we iterate this function over an entire season of games. To do this we 
+                    look up the information from each game and pass the information 
+                    to the first function, call the function, and then increase the count by one. Our count moves us to the next game, 
+                    finishing when we have counted through the entire season.
+                </p>
+                <br>
                 <figure class="figure">
                         <img src="https://sjellard.github.io/ELO-NBA/images/loop_games.PNG" class="figure-img img-fluid rounded" alt="...">
-                        <figcaption class="figure-caption"><small>Caption</small></figcaption>
+                        <figcaption class="figure-caption"><small></small></figcaption>
                 </figure>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum dolor, Lorem ipsum dolor sit amet 
-                    consectetur adipisicing elit. Ex, quo laborum iste nulla officiis autem? Pase tokel inure lops.
-                    </p>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime animi dicta tempore officia.
-                        Grat en ravin. Lorem ipsum dolor sit. Siten valu en animuso, enlibra! Enlibra! 
-                        </p>
+                <br><br>
                 <h5>Main technologies used:</h5>
                 <ul>
                     <li>Python, Pandas</li>
@@ -161,7 +191,10 @@
                     <li>Implement homecourt advantage
                     <li>Decrease autocorrelation (Lower K Value)
                 </ul>
-
+                <br>
+                <p> 2018-19 NBA schedule and game results sourced from <a href='https://www.basketball-reference.com/leagues/' target='_blank'>basketball-reference.com</a>.
+                </p>
+                <br>
                 <div class = "bottom">
                     <a href="https://github.com/SJEllard/ELO-NBA/blob/master/ELO-NBA-jupyter.ipynb" target="_blank">
                         <button type="button" class="btn btn-dark bottom-btn">
