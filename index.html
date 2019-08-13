@@ -34,8 +34,8 @@
                     World of Warcraft. 
                     <br><br>
                     A teams strength is represented by their rating (the higher, the better). 
-                    After every game the winner takes points from the loser. 
-                    The amount of points won (or lost) is determined by the difference in ratings. 
+                    After every game, the winner takes points from the loser. 
+                    The number of points won (or lost) is determined by the difference in ratings. 
                     For example, when a high rated team beats a low rated team they will only win a few points.
                     But, when a low rated team upsets a high rated team they win many points.  
                     <br><br>
@@ -68,13 +68,13 @@
                 </figure>
                 <br>
                 <p> 
-                        According to the Elo Rating System the Houston Rockets had the best performance,
+                        According to the Elo Rating System, the Houston Rockets had the best performance,
                         closely followed by the Portland Trail Blazers and the Milwaukee Bucks. 
                         <br><br>
                         Milwaukee should not be a surprise - MVP Giannis Antetokounmpo lead the Bucks to finish 1st overall in terms of
                         win-loss, finishing the regular season 60-22.
                         <br><br>
-                        Conversely, our Elo Rating System values the Rockets and the Trail Blazers greater then a 
+                        Conversely, our Elo Rating System values the Rockets and the Trail Blazers greater than a 
                         simple win-loss record might suggest, both those teams finished 53-29 (Tied for 5th overall).
                 </p>
                 <p> 
@@ -93,7 +93,7 @@
                         <br><br>
                         An interesting aspect of this result is how large the Raptors' rating difference 
                         is from the regular season to the playoffs (1627 to 1743, a <b>116  point increase</b>). 
-                        The Golden State Warriors and Philadephia 76ers also had signficant performance rating jumps,
+                        The Golden State Warriors and Philadephia 76ers also had significant performance rating jumps,
                         69 and 44 points respectively. 
                 </p>
                 <br>
@@ -115,10 +115,10 @@
                 <h2>How does it work?</h2>     
                 <br>   
                 <p> The first component of the algorithm is the comparison between two teams in a single game.
-                    The expected win probability is calculated based on the teams ratings. 
+                    The expected win probability is calculated based on the team's ratings. 
                 </p>
                 <p>
-                    In a match between two evenly rated teams each will have a win probability of 0.5 (they are expected to win half of the time). 
+                    In a match between two evenly rated teams, each will have a win probability of 0.5 (they are expected to win half of the time). 
                     The expected win probabilities are then compared to the real outcome of the game and both teams ratings are then updated accordingly.
                 </p>
                 <br>
@@ -172,7 +172,7 @@
 
                 <br>
                 <p> Next, we iterate this function over an entire season of games. To do this we 
-                    look up the information from each game and pass the information 
+                    lookup the information from each game and pass the information 
                     to the first function, call the function, and then increase the count by one. Our count moves us to the next game, 
                     finishing when we have counted through the entire season.
                 </p>
@@ -182,6 +182,11 @@
                         <figcaption class="figure-caption"><small></small></figcaption>
                 </figure>
                 <br><br>
+                <p> Running these functions will give us the Elo performance rating of all 30 teams after the entire season. 
+                    Each team starts at 1500 which should represent an average team relative to the pool. 
+                    Upper echelon teams end up being rated 1600 and above whereas mediocre teams generally 
+                    have performance ratings around 1400.
+                </p>
                 <h5>Main technologies used:</h5>
                 <ul>
                     <li>Python, Pandas</li>
